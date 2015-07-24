@@ -1,5 +1,8 @@
 package day5;
 
+import java.util.*;
+import java.io.*;
+
 class ScrabbleHelper
 {
 	Map <String, AnagramListStructure> anagramMap;
