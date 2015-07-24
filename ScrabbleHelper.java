@@ -1,8 +1,15 @@
 import java.util.*;
 
 class AnagramListStructure{	
-	String anagramList;
+	List<String> anagramList;
 	int score;
+	
+	AnagramListStructure(String word)
+	{
+		score = calculateScore(word);
+		anagramList = new ArrayList<String>();
+		anagramList.add(word);
+	}
 }
 public class ScrabbleHelper
 {
@@ -16,9 +23,15 @@ public class ScrabbleHelper
     	String word;
 		
 		String key = calculateKey(word);
+		AnagramListStructure anagramListStructure;
 		if(anagramMap.containsKey(word)){
-			
-		}	
+			anagramListStructure = anagramMap.get(key);
+			anagramListStructure.anagramList.add(word);
+		}
+		else{
+			anagramListStructure = new AnagramListStructure(word);
+			anagramMap.put(key, anagramListStructure);
+		}
 		}
 	}
 	
