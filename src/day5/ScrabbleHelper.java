@@ -36,8 +36,7 @@ class ScrabbleHelper
         String sortedWord = new String(charsInWord);
         return sortedWord;		
 	}
-	
-	
+		
 	
 	public static int calculateScore(String word){
 		//TODO: Dinesh
