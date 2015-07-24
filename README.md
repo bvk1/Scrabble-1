@@ -27,3 +27,6 @@ Handles wildcard entries. Returns a list of all possible words after considering
 ###Team 3
 
 Create a filter which given a list of combinations filters out combinations based on some criteria
+
+- Rishabh : Use regex for matching constraints
+- Amrit: Look for alternate ways to filter
