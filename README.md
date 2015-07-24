@@ -1,5 +1,8 @@
 # Scrabble
-Create some parts of the scrabble game
+Create some parts of the scrabble game. Features are:
+- Suggesting first word to be played given a rack
+- Support for blank tiles
+- Suggesting words to be played given some board constraints
 
 ##Tasks:
 
