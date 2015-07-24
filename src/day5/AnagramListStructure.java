@@ -8,7 +8,7 @@ class AnagramListStructure{
 	
 	AnagramListStructure(String word)
 	{
-		score = calculateScore(word);
+		score = ScrabbleHelper.calculateScore(word);
 		anagramList = new ArrayList<String>();
 		anagramList.add(word);
 	}
