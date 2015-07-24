@@ -10,6 +10,10 @@ Create some parts of the scrabble game. Features are:
 
 Implement anagram hashmap + basic structure of code
 
+- Swati - Create the Base Class and the List Structure class for the HashMap; Read the words from the file and populate the hashmap
+- Dinesh - writes a function to calculate the score for each word
+- Yashaswini - finds the Top N words
+
 ###Team 2
 
 Implement a function which given a rack of tiles, generates all possible combinations. Better to make a separate class like 
