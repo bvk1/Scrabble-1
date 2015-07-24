@@ -17,7 +17,7 @@ Combinations or something for this.
 Handles wildcard entries. Returns a list of all possible words after considering the spaces or special characters, along with the word scores.
 
 - Aakash - Create hashmap to store the list
-- Bhavya - Form possible words given the rack
+- Bhavya - Form possible words given the rack and handle blank tiles as well
 - Radhika - calculate scoress of words passed
 
 ###Team 3
