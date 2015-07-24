@@ -1,5 +1,7 @@
 package day5;
 
+import java.util.*;
+
 class AnagramListStructure{	
 	List<String> anagramList;
 	int score;
