@@ -1,13 +1,13 @@
-package spaceEnrtHandler;
-
 import java.util.*;
 import java.util.Arrays;
 
 public class Combinations {
     private StringBuilder output = new StringBuilder();
     private final String inputstring;
+   
     public Map<String,Integer> combinations;
-    Map <String, AnagramListStructure> anagramMap;
+    Map <String, List<String>> anagramMap;
+    
     public Combinations( final String str ){
         inputstring = str;
         combinations = new HashMap<String,Integer> ();
@@ -23,14 +23,15 @@ public class Combinations {
     	}
     	return score;
     }
-    public boolean isValidWord(String s){
+    public boolean ifKeyMatches(String s){
     	char[] arr = s.toCharArray();
     	Arrays.sort(arr);
-    	boolean bln = anagramMap.conatinsKey(arr);
+    	boolean bln = anagramMap.containsKey(arr);
+    	
     	return bln;
     }
     	
-    }
+    
     public void combine() { combine( 0 ); }
     private void combine(int start ){
         for ( int i = start; i < inputstring.length(); ++i ){
@@ -38,8 +39,13 @@ public class Combinations {
         		for(int j = 'a'; j <= 'z'; ++j) {	
         			output.append( (char)(j - 'a' + 'A'));
         			String word = output.toString();
-        			if(isValidWord(word)){
-                    combinations.put(word,findScore(word));
+        			int score = findScore(word);
+        			if(ifKeyMatches(word)){
+        				for(String anagram : anagramMap.get(word)){
+        					
+                    combinations.put(anagram,score);
+        			}
+                    
                     if ( i < inputstring.length() )
                     combine( i + 1);
                     output.setLength( output.length() - 1 );
@@ -49,8 +55,13 @@ public class Combinations {
         	else {
 	            output.append( inputstring.charAt(i) );
 	            String word = output.toString();
-	            if(isValidWord(word)){
-	            combinations.put(word,findScore(word));
+    			int score = findScore(word);
+    			if(ifKeyMatches(word)){
+    				for(String anagram : anagramMap.get(word)){
+    					
+                combinations.put(anagram,score);
+    			}
+	            
 	            if ( i < inputstring.length() )
 	            combine( i + 1);
 	            output.setLength( output.length() - 1 );
@@ -60,16 +71,14 @@ public class Combinations {
     }
  
 
-public static void main(String [] args){
+public static Map<String,Integer> FindMatchingWords(){
 	
 	String tiles; 
+	System.out.println("Enter tile rack: ");
 	Scanner rack = new Scanner(System.in);
 	tiles = rack.nextLine();
 	Combinations obj = new Combinations(tiles);
-	Set<String> keys = obj.combinations.keySet();
-	for (String key : keys) {
-	    System.out.println(key);
-	}
+	return obj.combinations;
 	
 	
 }
