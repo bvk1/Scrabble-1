@@ -18,7 +18,7 @@ Handles wildcard entries. Returns a list of all possible words after considering
 
 - Radhika - Generate all the words from the characters in the rack
 - Bhavya - Generate the words considering the blank tiles
-- Akash - check if the genertaed word is valid or not. If valid add to the valid list along with its score.
+- Aakash - Check if the generated word is valid or not. If valid add to the valid list along with its score.
 
 ###Team 3
 
