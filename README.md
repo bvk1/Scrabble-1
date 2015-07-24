@@ -16,9 +16,9 @@ Implement a function which given a rack of tiles, generates all possible combina
 Combinations or something for this. 
 Handles wildcard entries. Returns a list of all possible words after considering the spaces or special characters, along with the word scores.
 
-- Aakash - Create hashmap to store the list
-- Bhavya - Form possible words given the rack and handle blank tiles as well
-- Radhika - calculate scoress of words passed
+- Radhika - Generate all the words from the characters in the rack
+- Bhavya - Generate the words considering the blank tiles
+- Akash - check if the genertaed word is valid or not. If valid add to the valid list along with its score.
 
 ###Team 3
 
