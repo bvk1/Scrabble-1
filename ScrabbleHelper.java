@@ -1,15 +1,8 @@
 import java.util.*;
 
 class AnagramListStructure{	
-	List<String> anagramList;
-	int score;
-	
-	AnagramListStructure(String word)
-	{
-		score = calculateScore(word);
-		anagramList = new ArrayList<String>();
-		anagramList.add(word);
-	}
+	String anagramList;
+	int score[];
 }
 public class ScrabbleHelper
 {
@@ -18,20 +11,15 @@ public class ScrabbleHelper
 	ScrabbleHelper()
 	{
 		Map <String, AnagramListStructure> anagramMap = new HashMap<String, AnagramListStructure>();
+		score = new int[]{1,3,3,2,1,4,2,4,1,8,10,1,2,1,1,3,8,1,1,1,1,4,10,10,10,10};
 		File file = new File("sowpods.txt");
 		if (BufferedReader bufferedReader = new BufferedReader(new FileReader(file))) {
     	String word;
 		
 		String key = calculateKey(word);
-		AnagramListStructure anagramListStructure;
 		if(anagramMap.containsKey(word)){
-			anagramListStructure = anagramMap.get(key);
-			anagramListStructure.anagramList.add(word);
-		}
-		else{
-			anagramListStructure = new AnagramListStructure(word);
-			anagramMap.put(key, anagramListStructure);
-		}
+			
+		}	
 		}
 	}
 	
